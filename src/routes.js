@@ -11,6 +11,11 @@ routes.post(
   validate(validators.User),
   handle(controllers.UserController.store)
 );
+routes.put(
+  "/users/:id",
+  validate(validators.User),
+  handle(controllers.UserController.update)
+);
 routes.post(
   "/sessions",
   validate(validators.Session),
